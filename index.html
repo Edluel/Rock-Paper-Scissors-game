@@ -6,13 +6,16 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="/assets/css/style.css" rel="stylesheet" />
+  <script src="./assets/script/hideRules.js"></script>
+  <script src="./assets/script/script.js"></script>
+  
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 </head>
 <body>
   <header class="header">
     <div class="header-title">
-      <img src="./assets/images/logo.svg" alt="">
+      <img src="./assets/images/logo.svg" alt="game-title">
     </div>
     <div class="header-score">
       <div class="header-score-text">Score</div>
@@ -23,10 +26,15 @@
 
   <section>
     <div class="rules">
-      <div class="rules-header">
-        <div><h3>Rules</h3></div>
-        <div><img src="./assets/images/icon-close.svg" alt=""></div>
+      <div class="rules-gray-overlay"></div>
+      <div class="rules-box">
+        <div class="rules-box-header">
+          <div><h3>Rules</h3></div>
+          <div><img onclick="hideRules()" src="./assets/images/icon-close.svg" alt="close-button"></div>
+        </div>
+        <img src="./assets/images/image-rules.svg" alt="rules">
       </div>
+
     </div>
   </section>
 </body>
