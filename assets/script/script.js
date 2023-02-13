@@ -1,3 +1,5 @@
-function hideRules(){
-    document.querySelector('.rules').style.display = 'none';
+function toggleRules() {
+    const rules = document.querySelector('.rules');
+    rules.style.display === 'none' ? rules.style.display = 'block' : rules.style.display = 'none';
 }
+  

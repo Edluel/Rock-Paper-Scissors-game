@@ -56,6 +56,25 @@ body {
   cursor: pointer;
 }
 
+.rules-button {
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+}
+.rules-button button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: hsl(237deg, 49%, 15%);
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+.rules-button button:hover {
+  background-color: hsl(214deg, 47%, 23%);
+}
+
 .header {
   width: 55vw;
   display: flex;

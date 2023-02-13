@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 .rules{
     &-gray-overlay{
@@ -39,4 +40,24 @@
             }
         }
     }
+}
+
+.rules-button{
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    button{
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: $background-end;
+        border: 2px solid $sqr-bg;
+        color: $sqr-bg;
+        cursor: pointer;
+        &:hover{
+            background-color: $background-start;
+        }
+    }
+
 }
