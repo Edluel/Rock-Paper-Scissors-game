@@ -1,6 +1,38 @@
+@import 'variables';
+
 @mixin xy-flex-center($fdirection){
     display: flex;
     flex-direction: $fdirection;
     justify-content: space-around;
     align-items: center;
+}
+
+@mixin options-position($pos-left:false){
+    background-color: $sqr-bg;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @if $pos-left{
+        position: relative;
+        top: -25px;
+        left: $pos-left;
+    }
+
+}
+
+@mixin sbox-gradient($start, $end){
+    box-shadow: inset 0 0.3rem $gray-shadow,0 0 0 10px $start;
+    & .outside{
+        position: absolute;
+        display: flex;
+        height: 100px;
+        width: 100px;
+        box-shadow: inset 0 -0.3rem $end;
+        border-radius: 50%;
+    }
 }

@@ -1,0 +1,40 @@
+@import 'variables';
+@import 'mixins';
+
+.choice {
+    margin-top: 50px;
+    position: relative;
+    background-image: url('../images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 320px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img{
+        width: 45px;
+    }
+    &-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .paper{
+            @include options-position(-15px);
+            @include sbox-gradient($paper-start, $paper-end);
+        } 
+
+        .scissors {
+            @include options-position(15px);
+            @include sbox-gradient($scissors-start, $scissors-end);
+        }
+    }
+    &-bottom{
+        display: flex;
+        justify-content: space-around;
+        .rock{
+            @include options-position;
+            @include sbox-gradient($rock-start, $rock-end);
+        }
+    }
+}
