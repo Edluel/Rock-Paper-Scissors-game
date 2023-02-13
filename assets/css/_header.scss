@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+.header{
+    width: 55vw;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid $header-outline;
+    border-radius: 15px;
+    padding: 15px;
+    img{
+        object-fit: contain;
+        width: 75%;
+    }
+    &-score{
+        background-color: $sqr-bg;
+        padding: 10px;
+        width: 20%;
+        @include xy-flex-center(column);
+        border-radius: 8px;
+        &-text{
+            color: $score-text;
+            font-size: 0.7rem;
+        }
+        &-number{
+            color: $dark-text;
+            font-size: 2.3rem;
+        }
+    }
+}
