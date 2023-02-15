@@ -134,5 +134,3 @@ function getScoreFromLocalStorage() {
 function playAgain() {
     location.reload();
 }
-
-//localStorage.clear();

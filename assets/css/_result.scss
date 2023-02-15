@@ -5,6 +5,12 @@
     @include xy-flex-center(column, space-between);
     height: 60px;
     display: none;
+    @media (max-width: 415px) {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 20vh;
+    }
     &-text{
         color: $sqr-bg;
         font-weight: 700;
@@ -12,11 +18,14 @@
         padding-bottom: 10px;
     }
     &-again-bt{
-        color: $rock-end;
+        color: $background-end;
         padding: 10px 20px;
         border-radius: 10px;
         pointer-events: auto;
         cursor: pointer;
+        &:hover{
+            color: $rock-end;
+        }
     }
 
 }

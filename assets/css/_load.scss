@@ -10,10 +10,14 @@ $imgrock: './assets/images/icon-rock.svg';
     height: 350px;
     cursor: default;
     pointer-events: none;
+    @media (max-width: 415px) {
+        width: 80vw;
+        height: 80vw * 0.5;
+    }
 
     .your, .enemy{
         @include xy-flex-center(column,space-between);
-        height: 150px;;
+        height: 150px;
         &-text{
             color: $sqr-bg;
         }

@@ -64,6 +64,12 @@ body p {
   right: 50px;
   bottom: 30px;
 }
+@media (max-width: 415px) {
+  .rules-button {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
 .rules-button button {
   position: relative;
   display: inline-block;
@@ -86,6 +92,11 @@ body p {
   border: 2px solid hsl(217deg, 16%, 45%);
   border-radius: 15px;
   padding: 15px;
+}
+@media (max-width: 415px) {
+  .header {
+    width: 80vw;
+  }
 }
 .header img {
   -o-object-fit: contain;
@@ -122,6 +133,12 @@ body p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 415px) {
+  .choice {
+    width: 80vw;
+    height: 72vw;
+  }
 }
 .choice img {
   width: 45px;
@@ -210,6 +227,12 @@ body p {
   cursor: default;
   pointer-events: none;
 }
+@media (max-width: 415px) {
+  .load {
+    width: 80vw;
+    height: 40vw;
+  }
+}
 .load .your, .load .enemy {
   display: flex;
   flex-direction: column;
@@ -279,6 +302,14 @@ body p {
   height: 60px;
   display: none;
 }
+@media (max-width: 415px) {
+  .result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20vh;
+  }
+}
 .result-text {
   color: white;
   font-weight: 700;
@@ -286,9 +317,12 @@ body p {
   padding-bottom: 10px;
 }
 .result-again-bt {
-  color: hsl(349deg, 71%, 52%);
+  color: hsl(237deg, 49%, 15%);
   padding: 10px 20px;
   border-radius: 10px;
   pointer-events: auto;
   cursor: pointer;
+}
+.result-again-bt:hover {
+  color: hsl(349deg, 71%, 52%);
 }/*# sourceMappingURL=style.css.map */
