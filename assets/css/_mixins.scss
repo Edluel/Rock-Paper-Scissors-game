@@ -1,9 +1,9 @@
 @import 'variables';
 
-@mixin xy-flex-center($fdirection){
+@mixin xy-flex-center($fdirection,$space:space-around) {
     display: flex;
     flex-direction: $fdirection;
-    justify-content: space-around;
+    justify-content: $space;
     align-items: center;
 }
 

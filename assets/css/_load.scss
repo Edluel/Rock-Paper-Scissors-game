@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+$imgrock: './assets/images/icon-rock.svg';
+
+.load{
+    @include xy-flex-center(row,space-between);
+    display: none;
+    width: 500px;
+    height: 350px;
+    cursor: default;
+    pointer-events: none;
+
+    .your, .enemy{
+        @include xy-flex-center(column,space-between);
+        height: 150px;;
+        &-text{
+            color: $sqr-bg;
+        }
+   
+        .rock, .paper, .scissors{@include options-position;}
+        .rock {
+            @include sbox-gradient($rock-start, $rock-end);
+        }
+        .paper {
+            @include sbox-gradient($paper-start, $paper-end);
+        }
+        .scissors {
+            @include sbox-gradient($scissors-start, $scissors-end);
+        }
+    }
+
+    .enemy{
+        &-empty-choice{
+            display: none;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: $background-end;
+        }
+    }
+
+}

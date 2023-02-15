@@ -194,4 +194,76 @@ body {
   width: 100px;
   box-shadow: inset 0 -0.3rem hsl(349deg, 71%, 52%);
   border-radius: 50%;
+}
+
+.load {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  width: 500px;
+  height: 350px;
+  cursor: default;
+  pointer-events: none;
+}
+.load .your, .load .enemy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+.load .your-text, .load .enemy-text {
+  color: white;
+}
+.load .your .rock, .load .your .paper, .load .your .scissors, .load .enemy .rock, .load .enemy .paper, .load .enemy .scissors {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.load .your .rock, .load .enemy .rock {
+  box-shadow: inset 0 0.3rem rgba(169, 169, 169, 0.5), 0 0 0 10px hsl(349deg, 70%, 56%);
+}
+.load .your .rock .outside, .load .enemy .rock .outside {
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 100px;
+  box-shadow: inset 0 -0.3rem hsl(349deg, 71%, 52%);
+  border-radius: 50%;
+}
+.load .your .paper, .load .enemy .paper {
+  box-shadow: inset 0 0.3rem rgba(169, 169, 169, 0.5), 0 0 0 10px hsl(230deg, 89%, 62%);
+}
+.load .your .paper .outside, .load .enemy .paper .outside {
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 100px;
+  box-shadow: inset 0 -0.3rem hsl(230deg, 89%, 65%);
+  border-radius: 50%;
+}
+.load .your .scissors, .load .enemy .scissors {
+  box-shadow: inset 0 0.3rem rgba(169, 169, 169, 0.5), 0 0 0 10px hsl(39deg, 89%, 49%);
+}
+.load .your .scissors .outside, .load .enemy .scissors .outside {
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 100px;
+  box-shadow: inset 0 -0.3rem hsl(40deg, 84%, 53%);
+  border-radius: 50%;
+}
+.load .enemy-empty-choice {
+  display: none;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: hsl(237deg, 49%, 15%);
 }/*# sourceMappingURL=style.css.map */

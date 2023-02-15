@@ -2,8 +2,4 @@
 @use 'rules-window';
 @use 'header';
 @use 'choices';
-
-  
-.load{
-    display: none;
-}
+@use 'load';
