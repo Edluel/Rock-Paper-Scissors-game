@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    getScoreFromLocalStorage();
+});
+  
 function toggleRules() {
     const rules = document.querySelector('.rules');
     rules.style.display === 'none' ? rules.style.display = 'block' : rules.style.display = 'none';
@@ -80,11 +84,55 @@ function randomChoice() {
 }
 
 function gameResult(you, house){
-    new Promise(resolve => setTimeout(resolve, 1500)).then(() => {
-        alert(you);
-        alert(house);
-
-
     
+    const results = {
+        'rock': {
+            'rock': 'DRAW!',
+            'paper': 'YOU LOSE!',
+            'scissors': 'YOU WIN!'
+        },
+        'paper': {
+            'rock': 'YOU WIN!',
+            'paper': 'DRAW!',
+            'scissors': 'YOU LOSE!'
+        },
+        'scissors': {
+            'rock': 'YOU LOSE!',
+            'paper': 'YOU WIN!',
+            'scissors': 'DRAW!'
+        }
+    };
+
+    document.querySelector('.result-text').innerHTML = results[you][house];
+
+    new Promise(resolve => setTimeout(resolve, 500)).then(() => {      
+        document.querySelector('.result').style.display = 'flex';
+        updateScore();
     });
 }
+
+function updateScore() {
+    const resultText = document.querySelector('.result-text');
+    const scoreNumber = document.querySelector('.header-score-number');
+  
+    if (resultText.innerHTML === 'YOU WIN!') {
+      let score = parseInt(scoreNumber.innerHTML) + 1;
+      scoreNumber.innerHTML = score;
+      localStorage.setItem('score', score);
+    }
+}
+
+function getScoreFromLocalStorage() {
+    const scoreNumber = document.querySelector('.header-score-number');
+    const storedScore = localStorage.getItem('score');
+    if (storedScore) {
+      scoreNumber.innerHTML = storedScore;
+      toggleRules();
+    }
+}
+
+function playAgain() {
+    location.reload();
+}
+
+//localStorage.clear();

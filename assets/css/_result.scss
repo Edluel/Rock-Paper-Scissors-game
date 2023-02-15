@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins';
+
+.result{
+    @include xy-flex-center(column, space-between);
+    height: 60px;
+    display: none;
+    &-text{
+        color: $sqr-bg;
+        font-weight: 700;
+        font-size: 3rem;
+        padding-bottom: 10px;
+    }
+    &-again-bt{
+        color: $rock-end;
+        padding: 10px 20px;
+        border-radius: 10px;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+}

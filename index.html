@@ -6,8 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="/assets/css/style.css" rel="stylesheet" />
-  <script src="./assets/script/hideRules.js"></script>
-  <script src="./assets/script/script.js"></script>
+  <script src="./assets/script/script.js" defer></script>
   
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
@@ -18,7 +17,7 @@
       <img src="./assets/images/logo.svg" alt="game-title">
     </div>
     <div class="header-score">
-      <div class="header-score-text">S C O R E</div>
+      <div class="header-score-text"><p>S C O R E</p></div>
       <div class="header-score-number">0</div>
     </div>
   </header>
@@ -49,6 +48,10 @@
           <p>YOU PICKED</p>
         </div>
       </div>
+      <div class="result">
+        <p class="result-text"></p>
+        <button class="result-again-bt" onclick="playAgain()">PLAY AGAIN</button>
+      </div>
       <div class="enemy">
         <div class="enemy-text">
           <p>THE HOUSE PICKED</p>
@@ -56,6 +59,8 @@
         <div class="enemy-empty-choice"></div>
       </div>      
     </div>
+
+
 
 
   </main>

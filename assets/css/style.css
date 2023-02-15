@@ -16,6 +16,9 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
 }
+body p {
+  white-space: nowrap;
+}
 
 .rules-gray-overlay {
   position: fixed;
@@ -266,4 +269,26 @@ body {
   width: 80px;
   border-radius: 50%;
   background-color: hsl(237deg, 49%, 15%);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  display: none;
+}
+.result-text {
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+.result-again-bt {
+  color: hsl(349deg, 71%, 52%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  pointer-events: auto;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
